@@ -1,0 +1,40 @@
+# Training logs
+swanlog/
+wandb/
+logs/
+RFT_MLD/results/
+RFT_HY/output/
+RFT_HY/swanlog/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Data & checkpoints (download separately via HuggingFace/ModelScope)
+datasets/
+pretrain/
+deps/
+checkpoints/
+RFT_MLD/checkpoints/
+RFT_HY/t2m/evaluator.pth
+
+# Large data archives
+*.tar.gz
+Archive.zip
+
+# Root-level duplicate/dev scripts
+/train_motion_reward.sh
+/train_motion_reward_tiny_cross_align_lora16.sh
+RFT_MLD/_test_run_*.sh
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

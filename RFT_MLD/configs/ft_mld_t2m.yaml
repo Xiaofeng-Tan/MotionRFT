@@ -1,0 +1,120 @@
+FOLDER: 'checkpoints/rft_mld'
+TEST_FOLDER: './results'
+
+NAME: 'rft_mld_humanml'
+
+SEED_VALUE: 1234
+FINETUNE:
+  lambda_reward: 1e0
+  lambda_diff: 0
+  # 使用 motionreward 作为 reward model
+  reward_model_path: '../checkpoints/motionreward/stage1_retrieval_backbone.pth'
+
+
+TRAIN:
+  BATCH_SIZE: 256
+  SPLIT: 'train'
+  NUM_WORKERS: 8
+  PERSISTENT_WORKERS: true
+
+  # 预训练模型路径 - 从 pretrain/ckpts 读取
+  PRETRAINED: '../pretrain/mld/mld_humanml_v1.ckpt'
+  # PRETRAINED: 'checkpoints/ft_mld_nips/TFS_Pured_T1000_M0T0_E200/DRaFT_K50_G0_Re0_R1e00_TFS_Pured_T1000_M0T0_E200/checkpoints/E4-R1-0.553-FID-0.191.ckpt'
+  # PRETRAINED: 'checkpoints/ft_mld_nips/FT-[TFS_Pured_T1000_M0T0_E200]-_Mixed_T1000_M1T0_E14_1e-2/NIPS_K50_R1e00_FT-[TFS_Pured_T1000_M0T0_E200]-_Mixed_T1000_M1T0_E14_1e-2/checkpoints/E7-R1-0.58-FID-0.184.ckpt'
+
+  validation_steps: -1
+  validation_epochs: 50
+  checkpointing_steps: -1
+  checkpointing_epochs: 50
+  #max_train_steps: -1
+  #max_train_epochs: 3000
+  max_ft_steps: -1
+  max_ft_epochs: 3000
+  learning_rate: 1e-5
+  lr_scheduler: "cosine"
+  lr_warmup_steps: 1000
+  adam_beta1: 0.9
+  adam_beta2: 0.999
+  adam_weight_decay: 0.0
+  adam_epsilon: 1e-08
+  max_grad_norm: 1.0
+  model_ema: false
+  model_ema_steps: 32
+  model_ema_decay: 0.999
+
+VAL:
+  BATCH_SIZE: 256
+  SPLIT: 'test'
+  NUM_WORKERS: 12
+  PERSISTENT_WORKERS: true
+
+TEST:
+  BATCH_SIZE: 256
+  SPLIT: 'test'
+  NUM_WORKERS: 12
+  PERSISTENT_WORKERS: true
+
+  #CHECKPOINTS: 'checkpoints/mld_humanml/mld_humanml/2025-03-19T14-40-32/checkpoints/checkpoint-800.ckpt'
+  CHECKPOINTS: ''
+
+
+  # Testing Args
+  REPLICATION_TIMES: 20
+  MM_NUM_SAMPLES: 100
+  MM_NUM_REPEATS: 30
+  MM_NUM_TIMES: 10
+  DIVERSITY_TIMES: 300
+  DO_MM_TEST: True
+
+DATASET:
+  NAME: 'humanml3d'
+  # 辅助模型路径 - 从 deps 读取
+  SMPL_PATH: '../deps/smpl'
+  WORD_VERTILIZER_PATH: '../deps/glove/'
+  HUMANML3D:
+    FRAME_RATE: 20.0
+    UNIT_LEN: 4
+    # 数据集路径 - 从 datasets 读取
+    ROOT: '../datasets/humanml3d'
+    CONTROL_ARGS:
+      CONTROL: false
+      TEMPORAL: false
+      TRAIN_JOINTS: [0]
+      TEST_JOINTS: [0]
+      TRAIN_DENSITY: 'random'
+      TEST_DENSITY: 100
+      MEAN_STD_PATH: '../datasets/humanml_spatial_norm'
+  SAMPLER:
+    MAX_LEN: 200
+    MIN_LEN: 40
+    MAX_TEXT_LEN: 20
+  PADDING_TO_MAX: false
+  WINDOW_SIZE: null
+
+METRIC:
+  DIST_SYNC_ON_STEP: true
+  TYPE: ['TM2TMetrics']
+
+model:
+  target: ['motion_vae', 'text_encoder', 'denoiser', 'scheduler_ddim'] #, 'noise_optimizer']
+  latent_dim: [1, 256] #[16, 32]
+  guidance_scale: 7.5
+  guidance_uncondp: 0.1
+
+  t2m_textencoder:
+    dim_word: 300
+    dim_pos_ohot: 15
+    dim_text_hidden: 512
+    dim_coemb_hidden: 512
+
+  t2m_motionencoder:
+    dim_move_hidden: 512
+    dim_move_latent: 512
+    dim_motion_hidden: 1024
+    dim_motion_latent: 512
+
+  #bert_path: './deps/distilbert-base-uncased'
+  #clip_path: './deps/clip-vit-large-patch14'
+  # T5 模型路径 - 从 deps 读取
+  t5_path: '../deps/sentence-t5-large'
+  t2m_path: '../deps/t2m/'

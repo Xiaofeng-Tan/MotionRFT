@@ -1,0 +1,29 @@
+# MotionRFT Dependencies
+# Python 3.10
+
+# === Core ===
+torch>=2.1.0
+numpy>=1.26.0
+transformers>=4.38.0
+sentence-transformers>=2.2.2,<3.0.0
+diffusers>=0.24.0
+omegaconf>=2.3.0
+tqdm>=4.45.0
+matplotlib>=3.8.0
+scipy>=1.11.0
+pyyaml>=6.0
+
+# === MotionReward & RFT_MLD ===
+tensorboard>=2.14.0
+torchmetrics>=1.0.0
+rich>=13.0.0
+einops>=0.7.0
+
+# === RFT_HY ===
+torchdiffeq>=0.2.3
+
+# === Optional ===
+swanlab                # Training log visualization (https://swanlab.cn)
+# imageio             # Video rendering (RFT_MLD)
+# moviepy             # Video rendering (RFT_MLD)
+# gradio              # Web demo (RFT_HY)

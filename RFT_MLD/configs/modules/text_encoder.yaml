@@ -1,0 +1,5 @@
+text_encoder:
+  target: mld.models.architectures.mld_clip.MldTextEncoder
+  params:
+    last_hidden_state: false
+    modelpath: ${model.t5_path}
