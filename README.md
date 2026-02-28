@@ -18,6 +18,9 @@
 </p>
 
 <p align="center">
+  <a href="https://xiaofeng-tan.github.io/projects/MotionRFT/">
+    <img src="https://img.shields.io/badge/Project-Page-green?style=flat&logo=Google%20chrome&logoColor=green" alt="Project Page">
+  </a>
   <a href="">
     <img src="https://img.shields.io/badge/Paper-PDF-yellow?style=flat&logo=arXiv&logoColor=yellow" alt="Paper">
   </a>
