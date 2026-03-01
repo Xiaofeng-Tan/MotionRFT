@@ -287,7 +287,7 @@ huggingface-cli download tencent/HY-Motion-1.0 \
     --local-dir pretrain/hymotion
 ```
 
-> **Note**: The HY-Motion config uses `mean_std_dir: ./stats/` for normalization statistics (`Mean.npy`, `Std.npy`). If these files are not included in the official download, copy them from the HumanML3D dataset or contact the HY-Motion authors.
+> **Note**: The HY-Motion config uses `mean_std_dir: ./stats/` for normalization statistics (`Mean.npy`, `Std.npy`). If these files are not included in the official download, copy them from the HumanML3D dataset.
 
 #### 3c. Text Encoders for HY-Motion (Optional)
 
