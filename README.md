@@ -4,6 +4,8 @@
   <strong>UNDER REVIEW</strong>&emsp;|&emsp;Extended from <a href="">EasyTune</a> (ICLR 2026)
 </p>
 
+
+
 <p align="center">
   <a href='https://xiaofeng-tan.github.io/' target='_blank'>Xiaofeng&nbsp;Tan</a>&emsp;
   Wanjiang&nbsp;Weng&emsp;
@@ -49,6 +51,10 @@
 </p>
 <p align="center"><em>Visual results on HumanML3D. "w/o" = original base model; "w/" = after fine-tuning with EasyTune.</em></p>
 
+This repository offers the official code for **MotionRFT**. If you have any questions, feel free to contact **Xiaofeng Tan** ([xiaofengtan@seu.edu.cn](mailto:xiaofengtan@seu.edu.cn)).
+
+> If you encounter any issues with the code, please don't hesitate to let us know — we are committed to building and *continuously maintaining* a robust codebase for reinforcement fine-tuning in motion generation.
+
 ---
 
 ## 📑 Table of Contents
@@ -77,6 +83,7 @@
 - [x] Release RFT code for MLD (263-dim).
 - [x] Release RFT code for HY-Motion (135-dim).
 - [x] Release pretrained checkpoints.
+- [ ] Organize and polish documentation for each codebase module.
 - [ ] Release paper.
 
 ---
@@ -117,9 +124,9 @@
 <p align="center"><em>Text-motion retrieval evaluation across kinematic (263), joint (22x3), and rotation (135) representations.</em></p>
 
 <p align="center">
-  <img src="assets/tab_pref.png" width="45%" style="display:inline-block"/>
+  <img src="assets/tab_pref.png" width="35%" style="display:inline-block"/>
   &emsp;
-  <img src="assets/fig_faithful.png" width="45%" style="display:inline-block"/>
+  <img src="assets/fig_faithful.png" width="55%" style="display:inline-block"/>
 </p>
 <p align="center"><em>Left: Human preference prediction. Right: Motion authenticity detection.</em></p>
 
@@ -232,7 +239,7 @@ huggingface-cli download txf0620/MotionRFT_Models \
 
 ```bash
 modelscope download --model 'XiaofengTan/MotionRFT_Models' \
-    --include 'deps/*' --local_dir .
+    --include 'deps/*' --exclude 'README*' --local_dir .
 ```
 
 ### 3. Download Pretrained Generation Models
@@ -345,7 +352,7 @@ huggingface-cli download txf0620/MotionRFT_Models \
 
 ```bash
 modelscope download --model 'XiaofengTan/MotionRFT_Models' \
-    --include 'checkpoints/*' --local_dir .
+    --include 'checkpoints/*' --exclude 'README*' --local_dir .
 ```
 
 ### 5. Download RFT Checkpoints (Optional)
@@ -366,7 +373,8 @@ huggingface-cli download txf0620/MotionRFT_Checkpoints --local-dir .
 **Option 2: ModelScope**
 
 ```bash
-modelscope download --model 'XiaofengTan/MotionRFT_Checkpoints' --local_dir .
+modelscope download --model 'XiaofengTan/MotionRFT_Checkpoints' \
+    --exclude 'README*' --local_dir .
 ```
 
 ---
@@ -403,12 +411,14 @@ huggingface-cli download txf0620/MotionRewardData \
 **Option 2: ModelScope**
 
 ```bash
-modelscope download --dataset 'XiaofengTan/MotionRewardData' --local_dir .
+modelscope download --dataset 'XiaofengTan/MotionRewardData' \
+    --exclude 'README*' --local_dir .
 ```
 
 ### 1.3 Extract Data
 
 ```bash
+mkdir -p ./datasets
 tar xzf humanml3d.tar.gz -C ./datasets/
 tar xzf critic.tar.gz -C ./datasets/
 tar xzf ai_detection_packed.tar.gz -C ./datasets/
@@ -674,6 +684,8 @@ CKPT_FILTER="best" bash run_eval_mld.sh
 ### 3.2 RFT for HY-Motion (135-dim)
 
 Fine-tune [HY-Motion](https://github.com/tencent/HY-Motion) using RL with MotionReward.
+
+> ⚠️ **Environment Setup**: RFT_HY requires the HY-Motion environment. Please follow the official [HY-Motion 1.0](https://github.com/Tencent-Hunyuan/HY-Motion-1.0) repository to install the required dependencies before proceeding.
 
 **Prerequisites:**
 - MotionReward checkpoints (train via Section 2, or download via Setup Section 4)
