@@ -3,7 +3,7 @@ deps/
 pretrain/
 
 # Training data (download from HuggingFace/ModelScope)
-datasets/
+/datasets/
 
 # MotionReward checkpoints (download or train)
 checkpoints/
