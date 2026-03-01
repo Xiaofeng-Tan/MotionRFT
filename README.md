@@ -53,7 +53,7 @@
 
 This repository offers the official code for **MotionRFT**. If you have any questions, feel free to contact **Xiaofeng Tan** ([xiaofengtan@seu.edu.cn](mailto:xiaofengtan@seu.edu.cn)).
 
-> If you encounter any issues with the code, please don't hesitate to let us know — we are committed to building and *continuously maintaining* a robust codebase for reinforcement fine-tuning in motion generation.
+> If you encounter any issues with the code, please don't hesitate to let us know — we are committed to building and **continuously maintaining** a robust codebase for reinforcement fine-tuning in motion generation.
 
 ---
 
