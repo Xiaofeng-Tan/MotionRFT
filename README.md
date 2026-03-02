@@ -9,7 +9,6 @@
 <p align="center">
   <a href='https://xiaofeng-tan.github.io/' target='_blank'>Xiaofeng&nbsp;Tan</a>&emsp;
   Wanjiang&nbsp;Weng&emsp;
-  Hongsong&nbsp;Wang&emsp;
    <a href='https://hongsong-wang.github.io/' target='_blank'>Hongsong&nbsp;Wang</a>&emsp;
   Fang&nbsp;Zhao&emsp;
   Xin&nbsp;Geng&emsp;
