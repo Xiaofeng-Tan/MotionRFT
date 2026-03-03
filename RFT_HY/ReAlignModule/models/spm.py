@@ -126,7 +126,7 @@ class SPM(nn.Module):
 
         super().__init__()
         if t5_path is not None:
-            # self.clip = SentenceTransformer("sentence-transformers/sentence-t5-large", cache_folder='/data/wwj/llm')
+            # self.clip = SentenceTransformer("sentence-transformers/sentence-t5-large")
             self.clip = SentenceTransformer(t5_path)
         else:
             self.clip = None
