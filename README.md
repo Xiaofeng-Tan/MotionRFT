@@ -1,7 +1,7 @@
 <h1 align="center"><strong>MotionRFT: Unified Reinforcement Fine-Tuning for Text-to-Motion Generation</strong></h1>
 
 <p align="center">
-  <a href="https://arxiv.org/abs/2603.27185"><strong>arXiv 2603.27185</strong></a>&emsp;|&emsp;Extended from <a href="">EasyTune</a> (ICLR 2026)
+  Extended from <a href="">EasyTune</a> (ICLR 2026)
 </p>
 
 
@@ -22,6 +22,9 @@
 <p align="center">
   <a href="https://xiaofeng-tan.github.io/projects/MotionRFT/">
     <img src="https://img.shields.io/badge/Project-Page-green?style=flat&logo=Google%20chrome&logoColor=green" alt="Project Page">
+  </a>
+  <a href="https://arxiv.org/abs/2603.27185">
+    <img src="https://img.shields.io/badge/arXiv-2603.27185-b31b1b?style=flat" alt="arXiv">
   </a>
   <a href="https://arxiv.org/pdf/2603.27185">
     <img src="https://img.shields.io/badge/Paper-PDF-yellow?style=flat&logo=arXiv&logoColor=yellow" alt="Paper">
@@ -84,7 +87,7 @@ This repository offers the official code for **MotionRFT**. If you have any ques
 - [x] Release RFT code for MLD (263-dim).
 - [x] Release RFT code for HY-Motion (135-dim).
 - [x] Release pretrained checkpoints.
-- [x] Release paper.
+- [x] Release [paper](https://arxiv.org/abs/2603.27185).
 - [ ] Organize and polish documentation for each codebase module.
 
 ---
