@@ -1,7 +1,7 @@
 <h1 align="center"><strong>MotionRFT: Unified Reinforcement Fine-Tuning for Text-to-Motion Generation</strong></h1>
 
 <p align="center">
-  <strong>UNDER REVIEW</strong>&emsp;|&emsp;Extended from <a href="">EasyTune</a> (ICLR 2026)
+  <a href="https://arxiv.org/abs/2603.27185"><strong>arXiv 2603.27185</strong></a>&emsp;|&emsp;Extended from <a href="">EasyTune</a> (ICLR 2026)
 </p>
 
 
@@ -23,7 +23,7 @@
   <a href="https://xiaofeng-tan.github.io/projects/MotionRFT/">
     <img src="https://img.shields.io/badge/Project-Page-green?style=flat&logo=Google%20chrome&logoColor=green" alt="Project Page">
   </a>
-  <a href="">
+  <a href="https://arxiv.org/pdf/2603.27185">
     <img src="https://img.shields.io/badge/Paper-PDF-yellow?style=flat&logo=arXiv&logoColor=yellow" alt="Paper">
   </a>
   <a href="https://huggingface.co/datasets/txf0620/MotionRewardData">
@@ -75,6 +75,7 @@ This repository offers the official code for **MotionRFT**. If you have any ques
 ---
 
 ## 🔥 News
+- **[2026/03]** Paper is available on [arXiv](https://arxiv.org/abs/2603.27185).
 - **[2026/02]** Release code, data, and pretrained models.
 
 ## 📋 Plan
@@ -83,8 +84,8 @@ This repository offers the official code for **MotionRFT**. If you have any ques
 - [x] Release RFT code for MLD (263-dim).
 - [x] Release RFT code for HY-Motion (135-dim).
 - [x] Release pretrained checkpoints.
+- [x] Release paper.
 - [ ] Organize and polish documentation for each codebase module.
-- [ ] Release paper.
 
 ---
 
@@ -794,9 +795,10 @@ This work builds on many excellent research works and open-source projects:
 ## 📝 Citation
 
 ```bibtex
-@article{motionrft2026,
+@article{tan2026motionrft,
   title={MotionRFT: Unified Reinforcement Fine-Tuning for Text-to-Motion Generation},
   author={Tan, Xiaofeng and Weng, Wanjiang and Wang, Hongsong and Zhao, Fang and Geng, Xin and Wang, Liang},
+  journal={arXiv preprint arXiv:2603.27185},
   year={2026}
 }
 ```
