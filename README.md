@@ -1,6 +1,8 @@
 <h1 align="center"><strong>MotionRFT: Unified Reinforcement Fine-Tuning for Text-to-Motion Generation</strong></h1>
 
 <p align="center">
+  <strong>Accepted by IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</strong>
+  <br>
   Extended from <a href="">EasyTune</a> (ICLR 2026)
 </p>
 
@@ -20,6 +22,7 @@
 </p>
 
 <p align="center">
+  <img src="https://img.shields.io/badge/IEEE%20TPAMI-Accepted-blue?style=flat" alt="IEEE TPAMI">
   <a href="https://xiaofeng-tan.github.io/projects/MotionRFT/">
     <img src="https://img.shields.io/badge/Project-Page-green?style=flat&logo=Google%20chrome&logoColor=green" alt="Project Page">
   </a>
@@ -54,7 +57,7 @@
 </p>
 <p align="center"><em>Visual results on HumanML3D. "w/o" = original base model; "w/" = after fine-tuning with EasyTune.</em></p>
 
-This repository offers the official code for **MotionRFT**. If you have any questions, feel free to contact **Xiaofeng Tan** ([xiaofengtan@seu.edu.cn](mailto:xiaofengtan@seu.edu.cn)).
+This repository offers the official code for **MotionRFT**, accepted by **IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)**. If you have any questions, feel free to contact **Xiaofeng Tan** ([xiaofengtan@seu.edu.cn](mailto:xiaofengtan@seu.edu.cn)).
 
 > If you encounter any issues with the code, please don't hesitate to let us know — we are committed to building and **continuously maintaining** a robust codebase for reinforcement fine-tuning in motion generation.
 
@@ -78,6 +81,7 @@ This repository offers the official code for **MotionRFT**. If you have any ques
 ---
 
 ## 🔥 News
+- **[2026/10]** 🎉 MotionRFT has been accepted by **IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)**!
 - **[2026/03]** Paper is available on [arXiv](https://arxiv.org/abs/2603.27185).
 - **[2026/02]** Release code, data, and pretrained models.
 
@@ -801,7 +805,8 @@ This work builds on many excellent research works and open-source projects:
 @article{tan2026motionrft,
   title={MotionRFT: Unified Reinforcement Fine-Tuning for Text-to-Motion Generation},
   author={Tan, Xiaofeng and Weng, Wanjiang and Wang, Hongsong and Zhao, Fang and Geng, Xin and Wang, Liang},
-  journal={arXiv preprint arXiv:2603.27185},
-  year={2026}
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  year={2026},
+  note={Accepted for publication}
 }
 ```
