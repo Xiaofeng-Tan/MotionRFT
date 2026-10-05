@@ -3,14 +3,14 @@
 <p align="center">
   <strong>Accepted by IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</strong>
   <br>
-  Extended from <a href="">EasyTune</a> (ICLR 2026)
+  Extended from <a href="https://github.com/wengwanjiang/EasyTune">EasyTune</a> (ICLR 2026)
 </p>
 
 
 
 <p align="center">
   <a href='https://xiaofeng-tan.github.io/' target='_blank'>Xiaofeng&nbsp;Tan</a>&emsp;
-  <a href='https://wengwanjiang.github.io/' target='_blank'>Wanjiang&nbsp;Weng</a>&emsp;
+  <a href='https://github.com/wengwanjiang' target='_blank'>Wanjiang&nbsp;Weng</a>&emsp;
    <a href='https://hongsong-wang.github.io/' target='_blank'>Hongsong&nbsp;Wang</a>&emsp;
   Fang&nbsp;Zhao&emsp;
   Xin&nbsp;Geng&emsp;
@@ -691,14 +691,14 @@ CKPT_FILTER="best" bash run_eval_mld.sh
 
 ### 3.2 RFT for HY-Motion (135-dim)
 
-Fine-tune [HY-Motion](https://github.com/tencent/HY-Motion) using RL with MotionReward.
+Fine-tune [HY-Motion](https://github.com/Tencent-Hunyuan/HY-Motion-1.0) using RL with MotionReward.
 
 > ⚠️ **Environment Setup**: RFT_HY requires the HY-Motion environment. Please follow the official [HY-Motion 1.0](https://github.com/Tencent-Hunyuan/HY-Motion-1.0) repository to install the required dependencies before proceeding.
 
 **Prerequisites:**
 - MotionReward checkpoints (train via Section 2, or download via Setup Section 4)
 - HY-Motion pretrained model at `pretrain/hymotion/HY-Motion-1.0-Lite/` or `pretrain/hymotion/HY-Motion-1.0/` (Setup Section 3)
-- Evaluator checkpoint at `RFT_HY/t2m/evaluator.pth` (included in repo, or download via Setup Section 5)
+- Evaluator checkpoint at `RFT_HY/t2m/evaluator.pth` (download via Setup Section 5)
 
 ```bash
 cd RFT_HY

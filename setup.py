@@ -31,7 +31,7 @@ setup(
     },
     entry_points={
         "console_scripts": [
-            "motionreward-train=motionreward.training.train_retrieval_multi_repr:main",
+            "motionreward-train=motionreward.training.train_retrieval_lora_new:main",
         ],
     },
     classifiers=[
