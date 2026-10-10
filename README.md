@@ -143,7 +143,21 @@ This repository offers the official code for **MotionRFT**, accepted by **IEEE T
 <p align="center">
   <img src="assets/tab_sota_h3d.png" width="85%"/>
 </p>
-<p align="center"><em>Text-to-motion generation on HumanML3D across three representations. MotionRFT achieves best FID of 0.052 (MLD++) and 0.056 (HY-Motion).</em></p>
+<p align="center"><em>Text-to-motion generation on HumanML3D across kinematic, joint, and rotation representations. MotionRFT reaches FID 0.052 on MLD++, 0.084 on ACMDM, and 0.985 on HY-Motion. HY-Motion improves by 12.1% in R-Precision Top 1 and 21.7% in FID.</em></p>
+
+### Fine-Tuning Comparison on HumanML3D
+
+<p align="center">
+  <img src="assets/tab_finetune.png" width="85%"/>
+</p>
+<p align="center"><em>Comparison of fine-tuning methods on HumanML3D. EasyTune achieves FID 0.132 (70.7% improvement) with 22.10 GB peak memory, saving up to 15.22 GB over DRaFT.</em></p>
+
+### Generalization Across Models
+
+<p align="center">
+  <img src="assets/tab_generalize.png" width="85%"/>
+</p>
+<p align="center"><em>EasyTune and MotionRFT across six pre-trained models on HumanML3D. ODE-based models use one-step prediction; SDE-based models use noise-aware perception.</em></p>
 
 ---
 
