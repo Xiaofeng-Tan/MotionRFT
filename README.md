@@ -821,6 +821,6 @@ This work builds on many excellent research works and open-source projects:
   author={Tan, Xiaofeng and Weng, Wanjiang and Wang, Hongsong and Zhao, Fang and Geng, Xin and Wang, Liang},
   journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
   year={2026},
-  note={Accepted for publication}
+  doi={10.1109/TPAMI.2026.3741371}
 }
 ```
