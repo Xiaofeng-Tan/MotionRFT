@@ -9,8 +9,8 @@
 
 
 <p align="center">
-  <a href='https://xiaofeng-tan.github.io/' target='_blank'>Xiaofeng&nbsp;Tan</a>&emsp;
-  <a href='https://github.com/wengwanjiang' target='_blank'>Wanjiang&nbsp;Weng</a>&emsp;
+  <a href='https://xiaofeng-tan.github.io/' target='_blank'>Xiaofeng&nbsp;Tan*</a>&emsp;
+  <a href='https://github.com/wengwanjiang' target='_blank'>Wanjiang&nbsp;Weng*</a>&emsp;
    <a href='https://hongsong-wang.github.io/' target='_blank'>Hongsong&nbsp;Wang</a>✉&emsp;
   Fang&nbsp;Zhao&emsp;
   Xin&nbsp;Geng&emsp;
@@ -20,7 +20,7 @@
   Nanjing University&emsp;
   Chinese Academy of Sciences
   <br>
-  ✉ Corresponding author.
+  * Equal contribution.  &emsp; ✉ Corresponding author.
 </p>
 
 <p align="center">
